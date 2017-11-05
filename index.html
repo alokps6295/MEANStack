@@ -11,14 +11,20 @@
           
          
           <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+          <script type="text/ng-template" id="/home.html">
+            <div class="page-header">
+              <h1>Flapper News</h1>
+            </div>
+          
+            <!-- rest of template -->
+          </script>
         </head>
-        <body ng-app="News" ng-controller="MainCtrl">
+        <body ng-app="News">
+
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
-        
-              <div class="page-header">
-                <h1>Flapper News</h1>
-              </div>
+        <ui-view></ui-view>
+              
         
               <div ng-repeat="post in posts | orderBy:'-upvotes'">
                 <span class="glyphicon glyphicon-thumbs-up"
